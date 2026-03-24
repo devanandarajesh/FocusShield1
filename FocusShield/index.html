@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FocusShield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="page active">
+  <h1>FocusShield</h1>
+  <p class="quote">"Small steps every day = big results"</p>
+
+  <div class="form-container">
+    <input id="name" placeholder="Enter Name">
+    <input id="email" type="email" placeholder="Enter Email">
+    <input id="password" type="password" placeholder="Password">
+  </div>
+
+  <button class="main-btn" onclick="createProfile()">Create Profile</button>
+</div>
+
+<!-- SURVEY -->
+<div id="survey" class="page">
+  <h2>Study Survey</h2>
+
+  <div class="form-container">
+
+    <!-- QUESTION 1 -->
+    <label>How many hours do you study daily?</label>
+    <div class="options">
+      <label><input type="radio" name="hours" value="1-2"> 1-2 hours</label>
+      <label><input type="radio" name="hours" value="3-5"> 3-5 hours</label>
+      <label><input type="radio" name="hours" value="5+"> 5+ hours</label>
+    </div>
+
+    <!-- QUESTION 2 -->
+    <label>When are you most productive?</label>
+    <div class="options">
+      <label><input type="radio" name="productive" value="Morning"> Morning</label>
+      <label><input type="radio" name="productive" value="Afternoon"> Afternoon</label>
+      <label><input type="radio" name="productive" value="Night"> Night</label>
+    </div>
+
+    <!-- QUESTION 3 -->
+    <label>Do you follow a study schedule?</label>
+    <div class="options">
+      <label><input type="radio" name="schedule" value="Yes"> Yes</label>
+      <label><input type="radio" name="schedule" value="No"> No</label>
+    </div>
+
+    <!-- QUESTION 4 -->
+    <label>Do you use phone while studying?</label>
+    <div class="options">
+      <label><input type="radio" name="phone" value="Always"> Always</label>
+      <label><input type="radio" name="phone" value="Sometimes"> Sometimes</label>
+      <label><input type="radio" name="phone" value="Never"> Never</label>
+    </div>
+
+    <!-- QUESTION 5 (Checkbox multiple select) -->
+    <label>What distracts you the most?</label>
+    <div class="options">
+      <label><input type="checkbox" value="Phone" class="distraction"> Phone</label>
+      <label><input type="checkbox" value="Social Media" class="distraction"> Social Media</label>
+      <label><input type="checkbox" value="Friends" class="distraction"> Friends</label>
+      <label><input type="checkbox" value="Noise" class="distraction"> Noise</label>
+    </div>
+
+  </div>
+
+  <button class="main-btn" onclick="goHome()">Finish</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page">
+  <h2 id="greet"></h2>
+  <button class="main-btn" onclick="addTarget()">+ Add Target</button>
+  <div id="targets"></div>
+</div>
+
+<!-- SUBJECTS -->
+<div id="subjectPage" class="page">
+  <h2>Subjects</h2>
+  <div class="form-container">
+    <input id="newSubject" placeholder="Add Subject">
+  </div>
+  <button class="main-btn" onclick="addSubject()">+</button>
+  <div id="subjectList"></div>
+</div>
+
+<!-- TODO -->
+<div id="todo" class="page">
+  <h2>Enter your tasks</h2>
+  <div class="form-container">
+    <input id="taskInput" placeholder="Enter task">
+  </div>
+  <button class="main-btn" onclick="addTask()">+</button>
+  <div id="tasks"></div>
+</div>
+
+<!-- TIMER -->
+<div id="timer" class="page">
+  <h2>Timer</h2>
+  <div class="form-container">
+    <input id="timeInput" placeholder="Minutes">
+  </div>
+  <button class="main-btn" onclick="startTimer()">Start</button>
+  <h3 id="countdown"></h3>
+</div>
+
+<!-- NAVBAR -->
+<div class="bottom-nav">
+  <button onclick="showPage('home')">🏠</button>
+  <button onclick="showPage('subjectPage')">📚</button>
+  <button onclick="showPage('todo')">☑️</button>
+  <button onclick="showPage('timer')">⏱️</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

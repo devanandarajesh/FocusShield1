@@ -1,0 +1,107 @@
+
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f5f5;
+  color: #3e2723;
+}
+
+.page {
+  display: none;
+  padding: 20px;
+}
+
+.active {
+  display: block;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #4e342e;
+}
+
+.quote {
+  text-align: center;
+  color: #6d4c41;
+  font-style: italic;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 50%;
+  padding: 7px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #bcaaa4;
+}
+
+label {
+  width: 50%;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.main-btn {
+  width: 50%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #6d4c41;
+  color: white;
+  font-weight: bold;
+  margin: 15px auto;
+  display: block;
+}
+
+.main-btn:hover {
+  background: #8d6e63;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #3e2723;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.bottom-nav button {
+  font-size: 20px;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.target, .task {
+  background: white;
+  margin: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 5px solid #6d4c41;
+}
+
+.blur {
+  filter: blur(5px);
+  background: rgba(121, 85, 72, 0.2);
+}
+
+/* SURVEY OPTIONS */
+.options {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.options label {
+  display: block;
+  font-size: 14px;
+  margin: 3px 0;
+}
